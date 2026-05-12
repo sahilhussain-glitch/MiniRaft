@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  node:
+    build: .
+    environment:
+      - CLUSTER_SIZE=5
+    ports:
+      - "8080-8084:8080"
+    deploy:
+      replicas: 5
